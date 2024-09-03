@@ -15,5 +15,5 @@ for d in docs:
         doc_id=d[0], classification=d[1], authored=d[2], 
         title=d[3], body=d[4], source=d[5],
         pg_cnt=d[6], char_cnt=d[7], word_cnt=d[8]))
-with open('cia-foiarchive.json', 'w') as j:
-    j.write(json.dumps(docs_as_dicts, indent=4, default=str))
+    with open('cia-foiarchive-pre1970.json', 'a') as j:
+        j.write(json.dumps(docs_as_dicts, indent=4, default=str))
