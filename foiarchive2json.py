@@ -7,7 +7,7 @@ conn = psycopg2.connect("")
 # Create a cursor
 cur = conn.cursor()
 cur.execute("SET statement_timeout = 0;")
-stmts = aiosql.from_path("sql/foiarchive.sql", "psycopg2")
+stmts = aiosql.from_path("sql/space-weapons.sql", "psycopg2")
 docs = stmts.get_docs(conn)
 for d in docs:
     doc_dict = dict(doc_id=d[0], classification=d[1], authored=d[2], 
